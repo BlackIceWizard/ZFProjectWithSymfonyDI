@@ -1,0 +1,48 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "zendframework/zend-servicemanager": "dev-main as 2.7.11",
+        "zendframework/zendframework": "^2.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Zend\\ServiceManager\\": "DiBridge/zend-servicemanager/src",
+            "RiverRing\\DiPoc\\SimpleModule\\": "modules/SimpleModule/src",
+            "RiverRing\\DiPoc\\DiBridge\\": "DiBridge"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "DiBridge/zend-servicemanager"
+        }
+    ],
+    "replace": {
+        "zendframework/zend-servicemanager": "*"
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "5.2.*"
+        }
+    }
+}
