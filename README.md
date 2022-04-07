@@ -14,3 +14,10 @@ This action is started with the command:
 ```bash
 docker-compose exec php php public/index.php proof-of-concept
 ```
+
+result:
+```
+>> docker-compose exec php php public/index.php proof-of-concept
+string(24) "Hello! I'm Zend Service!"
+string(27) "Hello! I'm Symfony Service!"
+```
